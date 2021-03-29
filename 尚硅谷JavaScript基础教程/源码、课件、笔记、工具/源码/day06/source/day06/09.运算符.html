@@ -38,19 +38,26 @@
 			//console.log(typeof result);
 			
 			result = a + 1;
+			console.log(result);
 			
 			result = 456 + 789;
-			
+			console.log(result);
+
 			result = true + 1;
-			
+			console.log(result);
+
 			result = true + false;
-			
+			console.log(result);
+
 			result = 2 + null;
-			
+			console.log(result);
+
 			result = 2 + NaN;
-			
+			console.log(result);
+
 			result = "你好" + "大帅哥";
-			
+			console.log(result);
+
 			var str = "锄禾日当午，" +
 					  "汗滴禾下土，" +
 					  "谁知盘中餐，" +
@@ -58,9 +65,11 @@
 					  
 					  
 			result = 123 + "1";
-			
+			console.log(result);
+
 			result = true + "hello";
-			
+			console.log(result);
+
 			//任何值和字符串相加都会转换为字符串，并做拼串操作
 			/*
 			 * 我们可以利用这一特点，来将一个任意的数据类型转换为String
@@ -81,27 +90,29 @@
 			//console.log("c = "+c);
 			
 			result = 1 + 2 + "3"; //33
-			
+			console.log(result);
 			result = "1" + 2 + 3; //123
-			
+			console.log(result);
 			result = 100 - 5;
-			
+			console.log(result);
 			result = 100 - true;
-			
+			console.log(result);
 			result = 100 - "1";
-			
+			console.log(result);
+			result = "11111" - 0;
+			console.log(result);
 			result = 2 * 2;
-			
+			console.log(result);
 			result = 2 * "8";
-			
+			console.log(result);
 			result = 2 * undefined;
-			
+			console.log(result);
 			result = 2 * null;
-			
+			console.log(result);
 			result = 4 / 2;
-			
+			console.log(result);
 			result = 3 / 2;
-			
+			console.log(result);
 			/*
 			 * 任何值做- * /运算时都会自动转换为Number
 			 * 	我们可以利用这一特点做隐式的类型转换
