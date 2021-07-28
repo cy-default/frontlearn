@@ -26,7 +26,7 @@
 			function MyClass(){
 				
 			}
-			
+
 			//向MyClass的原型中添加属性a
 			MyClass.prototype.a = 123;
 			
@@ -39,8 +39,8 @@
 			
 			var mc2 = new MyClass();
 			
-			//console.log(MyClass.prototype);
-			//console.log(mc2.__proto__ == MyClass.prototype);
+			console.log(MyClass.prototype);
+			console.log(mc2.__proto__ == MyClass.prototype);
 			
 			//向mc中添加a属性
 			mc.a = "我是mc中的a";

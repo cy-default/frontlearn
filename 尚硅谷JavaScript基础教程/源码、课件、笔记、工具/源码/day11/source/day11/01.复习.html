@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
@@ -13,10 +13,12 @@
 			}*/
 			
 			var obj = {
-				
+				name:"lovemyrm13",
 				sayHello:function(){
-					//console.log(this);	
+					console.log("sayHello");
+					console.log(this);
 					function test(){
+						console.log("test");
 						console.log(this);
 					}
 					
@@ -24,8 +26,13 @@
 				}
 				
 			};
+
+			for (const objKey in obj) {
+				console.log("key:"+objKey);
+				console.log("value:"+obj[objKey]);
+			}
 			
-			obj.sayHello();
+			//obj.sayHello();
 			
 			var fun = obj.sayHello;
 			

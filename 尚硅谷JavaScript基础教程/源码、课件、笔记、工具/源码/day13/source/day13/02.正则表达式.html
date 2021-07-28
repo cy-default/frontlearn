@@ -45,16 +45,17 @@
 			 */
 			reg = /^a/; //匹配开头的a
 			
-			reg = /a$/; //匹配结尾的a
-			
-			//console.log(reg.test("abcabca"));
+			// reg = /a$/; //匹配结尾的a
+
+
+			// console.log(reg.test("abcabca"));
 			
 			/*
 			 * 如果在正则表达式中同时使用^ $则要求字符串必须完全符合正则表达式
 			 */
-			reg = /^a$/;
+			reg = /^(ab)$/ig;
 			
-			//console.log(reg.test("bbca"));
+			console.log(reg.test("ab"));
 			
 			/*
 			 * 创建一个正则表达式，用来检查一个字符串是否是一个合法手机号
@@ -69,7 +70,8 @@
 			 *  ^1   [3-9]  [0-9]{9}$  
 			 * 
 			 */
-			
+
+
 			var phoneStr = "13067890123";
 			
 			var phoneReg = /^1[3-9][0-9]{9}$/;

@@ -13,6 +13,7 @@
 			//创建一个Date对象
 			//如果直接使用构造函数创建一个Date对象，则会封装为当前代码执行的时间
 			var d = new Date();
+			console.log(d)
 			
 			//创建一个指定的时间对象
 			//需要在构造函数中传递一个表示时间的字符串作为参数
@@ -23,7 +24,8 @@
 			 * getDate()
 			 * 	- 获取当前日期对象是几日
 			 */
-			var date = d2.getDate();
+			var date = d.getDate();
+			console.log(date)
 			/*
 			 * getDay()
 			 * 	- 获取当前日期对象时周几
@@ -77,7 +79,7 @@
 			//获取当前的时间戳
 			var start = Date.now();
 			
-			for(var i=0 ; i<100 ; i++){
+			for(var i=0 ; i<10000 ; i++){
 				console.log(i);
 			}
 			

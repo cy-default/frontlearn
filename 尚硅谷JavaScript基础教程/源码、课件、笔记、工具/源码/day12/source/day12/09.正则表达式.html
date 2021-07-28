@@ -16,8 +16,8 @@
 			
 			var reg = /a/i;
 			
-			//console.log(typeof reg);
-			//console.log(reg.test("abc"));
+			console.log(typeof reg);
+			console.log(reg.test("abc"));
 			
 			//创建一个正则表达式，检查一个字符串中是否有a或b
 			/*
@@ -47,10 +47,11 @@
 			 * [^ ] 除了
 			 */
 			reg = /[^ab]/;
-			
+			console.log(reg.test("b"));
+
 			reg = /[^0-9]/;
 			
-			console.log(reg.test("12a3456"));
+			console.log(reg.test("12d3456"));
 			
 		</script>
 	</head>

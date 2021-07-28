@@ -17,7 +17,20 @@
 			for(var i=0 ; i<arr.length ; i++){
 				console.log(arr[i]);
 			}
-			
+
+			arr.forEach(function (value, index, array){
+				console.log(value);
+			});
+
+			for (const arrKey in arr) {
+				console.log(arrKey);
+				console.log(arr[arrKey]);
+			}
+
+			for (const string of arr) {
+				console.log(string);
+			}
+
 		</script>
 	</head>
 	<body>
