@@ -75,7 +75,7 @@
 					/*
 					 * 切换到下一张是index自增
 					 */
-					index++;
+					index = index % arr.length;
 					
 					if(index > imgArr.length - 1){
 						index = 0;

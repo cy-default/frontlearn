@@ -17,9 +17,24 @@
 			function fun(){
 				//console.log("a = "+a+", b = "+b);
 				console.log(this.name);
+
+				function  ff(){
+					console.log("ff");
+					console.log(this);
+					console.log(window)
+					function  fff(){
+						console.log("fff");
+						console.log(this);
+						console.log(window);
+					}
+					fff();
+				}
+
+				ff();
+
 			}
 			
-			//fun();
+			fun();
 			
 			//创建一个对象
 			var obj = {
