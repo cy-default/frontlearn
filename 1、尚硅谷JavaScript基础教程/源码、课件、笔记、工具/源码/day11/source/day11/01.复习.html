@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			
+			
+			/*alert("hello");
+			
+			function fun(){
+				a = 10;
+			}*/
+			
+			var obj = {
+				name:"lovemyrm13",
+				sayHello:function(){
+					console.log("sayHello");
+					console.log(this);
+					function test(){
+						console.log("test");
+						console.log(this);
+					}
+					
+					test();
+				}
+				
+			};
+
+			for (const objKey in obj) {
+				console.log("key:"+objKey);
+				console.log("value:"+obj[objKey]);
+			}
+			
+			//obj.sayHello();
+			
+			var fun = obj.sayHello;
+			
+			//fun();
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

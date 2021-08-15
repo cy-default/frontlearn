@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			/*
+			 * && || 非布尔值的情况
+			 * 	- 对于非布尔值进行与或运算时，
+			 * 		会先将其转换为布尔值，然后再运算，并且返回原值
+			 * 	- 与运算：
+			 * 		- 如果第一个值为true，则必然返回第二个值
+			 * 		- 如果第一个值为false，则直接返回第一个值
+			 * 
+			 * 	- 或运算
+			 * 		- 如果第一个值为true，则直接返回第一个值
+			 * 		- 如果第一个值为false，则返回第二个值
+			 * 
+			 */
+			
+			//true && true
+			//与运算：如果两个值都为true，则返回后边的
+			var result = 5 && 6; // 6
+			console.log(" 5 && 6 == "+result);
+			
+			
+			//与运算：如果两个值中有false，则返回靠前的false
+			//false && true
+			result = 0 && 2; // 0
+			console.log(" 0 && 2 =="+result);
+
+
+			result = 2 && 0; // 0
+			console.log("2 && 0 =="+result);
+
+
+			//false &&　false
+			result = NaN && 0; //NAN
+			console.log("NaN && 0 =="+result);
+
+
+			result = 0 && NaN; // 0
+			console.log("0 && NaN =="+result);
+
+			
+			//true || true
+			//如果第一个值为true，则直接返回第一个值
+			result = 2 || 1;  // 2
+			console.log("2 || 1 =="+result);
+
+			result = 2 || NaN; // 2
+			console.log("2 || NaN =="+result);
+
+
+			result = 2 || 0; // 2
+			console.log("2 || 0 =="+result);
+
+
+			//如果第一个值为false，则直接返回第二个值
+			result = NaN || 1; // 1
+			console.log("NaN || 1 =="+result);
+
+
+			result = NaN || 0; // 0
+			console.log("NaN || 0 =="+result);
+
+			result = "" || "hello"; // hello
+			console.log('"" || "hello"=='+result);
+
+
+			result = -1 || "你好"; // -1
+			console.log('-1 || "你好" =='+result);
+
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>
