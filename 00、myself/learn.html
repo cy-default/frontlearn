@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function my01() {
+        console.log("my01", this);
+        my02();
+
+        function my03() {
+            console.log("my03", this);
+
+            function my04() {
+                console.log("my04", this);
+            }
+
+            my04();
+        }
+
+        my03();
+    }
+
+    function my02() {
+        console.log("my02", this);
+    }
+
+    my01();
+
+</script>
+
+</body>
+</html>
