@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-</head>
-<body>
-
-<script>
-
-    function my01() {
+  </head>
+  <body>
+    <h1>dadsf</h1>
+    <iframe
+      src="http://10.8.144.143:53904/gisManager/booth/booth-delete?booth_type=1&boothId=30602&map_version=v3"
+      width="100%"
+      height="1000"
+    ></iframe>
+    <script>
+      function my01() {
         console.log("my01", this);
         my02();
 
         function my03() {
-            console.log("my03", this);
+          console.log("my03", this);
 
-            function my04() {
-                console.log("my04", this);
-            }
+          function my04() {
+            console.log("my04", this);
+          }
 
-            my04();
+          my04();
         }
 
         my03();
-    }
+      }
 
-    function my02() {
+      function my02() {
         console.log("my02", this);
-    }
+      }
 
-    my01();
+      my01();
 
-</script>
-
-</body>
+      // location.href="http://www.baidu.com";
+    </script>
+  </body>
 </html>
