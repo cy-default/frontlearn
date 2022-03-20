@@ -1,0 +1,41 @@
+select
+        <if test="type != null and type==0">
+            rbd.doorplate_code as doorplateCode,
+        </if>
+        <if test="type != null and type==1">
+            raa.type as adverAttributeName,
+            rbp.position as adverPositionName,
+            ratt.type as adverTypeName,
+        </if>
+        <if test="type != null and type==2">
+            rbp1.position as areaPositionName,
+            rpau.usetype as areaUseName,
+        </if>
+        rpih.*,
+        rpdr.transaction_code,
+        rpdr.commit_id AS commitId,
+        rpdr.uuid AS uuid,
+        rpdr.upload_status AS uploadStatus,
+        rpir.img AS img
+        FROM rem_product_info_his rpih
+        INNER JOIN rem_product_datachange_relate rpdr 
+        ON rpih.ref_mainrelate_id = rpdr.id and rpih.change_type=0
+        INNER JOIN rem_product_id_relate rpir ON rpir.ref_mainrelate_id = rpdr.id
+
+        <if test="type != null and type==0">
+            left JOIN rem_product_info rbd on rpih.ref_product_id=rbd.id AND rpih.type = 0
+        </if>
+        <if test="type != null and type==1">
+            left JOIN rem_adver_attribute raa ON raa.id = rpih.adver_attribute_id
+            left JOIN rem_booth_position rbp ON rbp.id = rpih.adver_position_id
+            left JOIN rem_adver_type ratt ON ratt.id = rpih.adver_type_id
+        </if>
+        where 1=1
+        <if test="id != null">
+            and rpdr.id = #{id,jdbcType=INTEGER}
+        </if>
+        <if test="transactioncodes != null">
+            and rpdr.transaction_code in (${transactioncodes})
+        </if>
+        group by rpih.id
+        order by rpih.id asc
